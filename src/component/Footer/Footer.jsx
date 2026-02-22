@@ -12,7 +12,7 @@ export default function Footer() {
         <li><NavLink>ContactUs</NavLink></li>
     </>
     return (
-        <div className='mx-15'>
+        <div className='md:mx-15'>
             <div className="flex justify-center">
                 <img src={logo} alt="" className='' />
                 <a className="btn btn-ghost text-xl md:text-2xl font-bold">Phudu</a>
