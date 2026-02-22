@@ -9,12 +9,12 @@ export default function Banner() {
             <div className="w-[80%]">
                 <h1 className='md:text-5xl text-center md:leading-[3.5rem]'>Dependable Care, Backed by Trusted Professionals.</h1>
                 <p className="text-[#818181] text-center my-5">Our platform connects you with verified. exprenced doctors across vairous specialties -- all your convenience. Whether it's a routine checkup or urgent consultation book appointment in minutes and receive quality care you can trust</p>
-                <section className="flex gap-5 justify-center">
+                <section className="sm:flex gap-5 justify-center">
                     <input className='rounded-[1.5rem] w-[40%] shadow px-5' type="text" placeholder='Search any doctors' />
                     <button className='btn bg-blue-700 text-white rounded-[1.5rem]'>Search Now</button>
                 </section>
             </div>
-            <div className="flex gap-5 mt-5">
+            <div className="md:flex gap-5 mt-5">
                 <img className='w-96 h-64 rounded' src={bannerImg1} alt="" />
                 <img className='w-96 h-64 rounded' src={bannerImg2} alt="" />
             </div>
