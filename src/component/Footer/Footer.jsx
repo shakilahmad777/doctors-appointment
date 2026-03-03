@@ -3,14 +3,10 @@ import './Footer.css'
 import logo from '../../assets/logo.png'
 import { NavLink } from 'react-router'
 import { Facebook, Linkedin, Twitter, Youtube } from 'lucide-react'
+import { navItems } from '../../NavLink'
 
 export default function Footer() {
-    const footerLinks = <>
-        <li><NavLink>Home</NavLink></li>
-        <li><NavLink>My-Booking</NavLink></li>
-        <li><NavLink>Blogs</NavLink></li>
-        <li><NavLink>ContactUs</NavLink></li>
-    </>
+    const footerLinks = navItems;
     return (
         <div className='md:mx-15'>
             <div className="flex justify-center">
@@ -19,7 +15,11 @@ export default function Footer() {
             </div>
             <div className="footer shadow-sm justify-center my-5">
                 <ul className='menu menu-horizontal px-1'>
-                    {footerLinks}
+                    {
+                        footerLinks.map((link, index) => <li><NavLink key={index} to={link.path} className={({ isActive }) =>
+                            isActive ? "text-blue-500 font-bold border-r-2" : ""
+                        }>{link.name}</NavLink></li>)
+                    }
                 </ul>
             </div>
             <div className="flex justify-center gap-5 text-white">

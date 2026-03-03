@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import NavBar from '../../component/Header/NavBar'
 import { Outlet } from 'react-router'
 import Footer from '../../component/Footer/Footer'

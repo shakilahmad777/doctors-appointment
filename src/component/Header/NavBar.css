@@ -1,3 +1,5 @@
-.active:focus {
-    border-right: 2px solid blue;
+.small-menu:hover {
+    background: rgba(142, 142, 231, 0.719);
+    color: white;
+    transition: all 0.05s ease-in-out;
 }
