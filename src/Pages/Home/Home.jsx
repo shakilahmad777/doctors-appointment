@@ -1,7 +1,7 @@
 
 import Banner from '../../component/Banner/Banner'
 import Doctors from '../../component/Doctors/Doctors'
-import Test from '../../component/test'
+import MedicalService from '../../component/MedicalService/MedicalService'
 
 export default function Home() {
 	return (
@@ -9,7 +9,7 @@ export default function Home() {
 			<h1>this is home</h1>
 			<Banner></Banner>
 			<Doctors></Doctors>
-			<Test></Test>
+			<MedicalService></MedicalService>
 		</div>
 	)
 }
