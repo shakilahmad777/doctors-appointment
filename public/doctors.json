@@ -1,110 +1,194 @@
 [
-    {
-      "id": 1,
-      "image": "/img/doctor1.png",
-      "name": "Dr. Arif Rahman",
-      "education": "MBBS, FCPS (Medicine)",
-      "speciality": "Internal Medicine",
-      "experience": "12 Years",
-      "registrationNumber": "BMDC-10234"
-    },
-    {
-      "id": 2,
-      "image": "./img/doctor2.png",
-      "name": "Dr. Nusrat Jahan",
-      "education": "MBBS, MS (Gynecology)",
-      "speciality": "Gynecology & Obstetrics",
-      "experience": "9 Years",
-      "registrationNumber": "BMDC-11245"
-    },
-    {
-      "id": 3,
-      "image": "./img/doctor3.jpg",
-      "name": "Dr. Tanvir Hasan",
-      "education": "MBBS, MD (Cardiology)",
-      "speciality": "Cardiology",
-      "experience": "15 Years",
-      "registrationNumber": "BMDC-12256"
-    },
-    {
-      "id": 4,
-      "image": "./img/doctor4.png",
-      "name": "Dr. Samira Islam",
-      "education": "MBBS, FCPS (Dermatology)",
-      "speciality": "Dermatology",
-      "experience": "8 Years",
-      "registrationNumber": "BMDC-13267"
-    },
-    {
-      "id": 5,
-      "image": "./img/doctor5.jpg",
-      "name": "Dr. Mahmudul Karim",
-      "education": "MBBS, MS (Orthopedics)",
-      "speciality": "Orthopedic Surgery",
-      "experience": "14 Years",
-      "registrationNumber": "BMDC-14278"
-    },
-    {
-      "id": 6,
-      "image": "./img/doctor6.jpg",
-      "name": "Dr. Farhana Akter",
-      "education": "MBBS, MD (Pediatrics)",
-      "speciality": "Pediatrics",
-      "experience": "10 Years",
-      "registrationNumber": "BMDC-15289"
-    },
-    {
-      "id": 7,
-      "image": "./img/doctor7.png",
-      "name": "Dr. Rafiul Alam",
-      "education": "MBBS, FCPS (Neurology)",
-      "speciality": "Neurology",
-      "experience": "11 Years",
-      "registrationNumber": "BMDC-16290"
-    },
-    {
-      "id": 8,
-      "image": "./img/doctor8.jpg",
-      "name": "Dr. Sharmeen Kabir",
-      "education": "MBBS, MS (ENT)",
-      "speciality": "ENT Specialist",
-      "experience": "7 Years",
-      "registrationNumber": "BMDC-17291"
-    },
-    {
-      "id": 9,
-      "image": "./img/doctor9.jpg",
-      "name": "Dr. Imran Hossain",
-      "education": "MBBS, MD (Oncology)",
-      "speciality": "Oncology",
-      "experience": "16 Years",
-      "registrationNumber": "BMDC-18292"
-    },
-    {
-      "id": 10,
-      "image": "./img/doctor10.jpg",
-      "name": "Dr. Mitu Chowdhury",
-      "education": "MBBS, FCPS (Psychiatry)",
-      "speciality": "Psychiatry",
-      "experience": "6 Years",
-      "registrationNumber": "BMDC-19293"
-    },
-    {
-      "id": 11,
-      "image": "./img/doctor11.png",
-      "name": "Dr. Sajid Ahmed",
-      "education": "MBBS, MS (Urology)",
-      "speciality": "Urology",
-      "experience": "13 Years",
-      "registrationNumber": "BMDC-20294"
-    },
-    {
-      "id": 12,
-      "image": "./img/doctor12.jpg",
-      "name": "Dr. Liza Sultana",
-      "education": "MBBS, MD (Endocrinology)",
-      "speciality": "Endocrinology",
-      "experience": "9 Years",
-      "registrationNumber": "BMDC-21295"
+  {
+    "id": 1,
+    "image": "/img/doctor1.png",
+    "name": "Dr. Arif Rahman",
+    "education": "MBBS, FCPS (Medicine)",
+    "speciality": "Internal Medicine",
+    "experience": "12 Years",
+    "registrationNumber": "BMDC-10234",
+    "hospital": "Dhaka Medical Center",
+    "consultationFee": 800,
+    "available": true,
+    "schedule": {
+      "workingDays": ["Sunday", "Monday", "Tuesday", "Wednesday"],
+      "timeSlots": ["09:00 AM - 12:00 PM", "02:00 PM - 04:00 PM"]
     }
-  ]
+  },
+  {
+    "id": 2,
+    "image": "./img/doctor2.png",
+    "name": "Dr. Nusrat Jahan",
+    "education": "MBBS, MS (Gynecology)",
+    "speciality": "Gynecology & Obstetrics",
+    "experience": "9 Years",
+    "registrationNumber": "BMDC-11245",
+    "hospital": "City Care Hospital",
+    "consultationFee": 700,
+    "available": false,
+    "schedule": {
+      "workingDays": ["Sunday", "Tuesday", "Thursday"],
+      "timeSlots": ["10:00 AM - 01:00 PM", "05:00 PM - 07:00 PM"]
+    }
+  },
+  {
+    "id": 3,
+    "image": "./img/doctor3.jpg",
+    "name": "Dr. Tanvir Hasan",
+    "education": "MBBS, MD (Cardiology)",
+    "speciality": "Cardiology",
+    "experience": "15 Years",
+    "registrationNumber": "BMDC-12256",
+    "hospital": "Heart Care Institute",
+    "consultationFee": 1200,
+    "available": true,
+    "schedule": {
+      "workingDays": ["Monday", "Wednesday", "Friday"],
+      "timeSlots": ["08:00 AM - 11:00 AM", "03:00 PM - 05:00 PM"]
+    }
+  },
+  {
+    "id": 4,
+    "image": "./img/doctor4.png",
+    "name": "Dr. Samira Islam",
+    "education": "MBBS, FCPS (Dermatology)",
+    "speciality": "Dermatology",
+    "experience": "8 Years",
+    "registrationNumber": "BMDC-13267",
+    "hospital": "Skin Care Clinic",
+    "consultationFee": 600,
+    "available": true,
+    "schedule": {
+      "workingDays": ["Sunday", "Monday", "Thursday"],
+      "timeSlots": ["11:00 AM - 02:00 PM"]
+    }
+  },
+  {
+    "id": 5,
+    "image": "./img/doctor5.jpg",
+    "name": "Dr. Mahmudul Karim",
+    "education": "MBBS, MS (Orthopedics)",
+    "speciality": "Orthopedic Surgery",
+    "experience": "14 Years",
+    "registrationNumber": "BMDC-14278",
+    "hospital": "Bone & Joint Hospital",
+    "consultationFee": 900,
+    "available": false,
+    "schedule": {
+      "workingDays": ["Sunday", "Tuesday", "Wednesday"],
+      "timeSlots": ["09:00 AM - 12:00 PM", "04:00 PM - 06:00 PM"]
+    }
+  },
+  {
+    "id": 6,
+    "image": "./img/doctor6.jpg",
+    "name": "Dr. Farhana Akter",
+    "education": "MBBS, MD (Pediatrics)",
+    "speciality": "Pediatrics",
+    "experience": "10 Years",
+    "registrationNumber": "BMDC-15289",
+    "hospital": "Child Health Center",
+    "consultationFee": 650,
+    "available": true,
+    "schedule": {
+      "workingDays": ["Sunday", "Monday", "Tuesday"],
+      "timeSlots": ["10:00 AM - 01:00 PM"]
+    }
+  },
+  {
+    "id": 7,
+    "image": "./img/doctor7.png",
+    "name": "Dr. Rafiul Alam",
+    "education": "MBBS, FCPS (Neurology)",
+    "speciality": "Neurology",
+    "experience": "11 Years",
+    "registrationNumber": "BMDC-16290",
+    "hospital": "Neuro Care Hospital",
+    "consultationFee": 1100,
+    "available": false,
+    "schedule": {
+      "workingDays": ["Monday", "Wednesday", "Thursday"],
+      "timeSlots": ["09:30 AM - 12:30 PM", "03:30 PM - 05:30 PM"]
+    }
+  },
+  {
+    "id": 8,
+    "image": "./img/doctor8.jpg",
+    "name": "Dr. Sharmeen Kabir",
+    "education": "MBBS, MS (ENT)",
+    "speciality": "ENT Specialist",
+    "experience": "7 Years",
+    "registrationNumber": "BMDC-17291",
+    "hospital": "ENT Specialist Clinic",
+    "consultationFee": 500,
+    "available": true,
+    "schedule": {
+      "workingDays": ["Sunday", "Tuesday", "Thursday"],
+      "timeSlots": ["01:00 PM - 04:00 PM"]
+    }
+  },
+  {
+    "id": 9,
+    "image": "./img/doctor9.jpg",
+    "name": "Dr. Imran Hossain",
+    "education": "MBBS, MD (Oncology)",
+    "speciality": "Oncology",
+    "experience": "16 Years",
+    "registrationNumber": "BMDC-18292",
+    "hospital": "Cancer Care Center",
+    "consultationFee": 1300,
+    "available": false,
+    "schedule": {
+      "workingDays": ["Monday", "Tuesday", "Wednesday"],
+      "timeSlots": ["08:00 AM - 11:00 AM"]
+    }
+  },
+  {
+    "id": 10,
+    "image": "./img/doctor10.jpg",
+    "name": "Dr. Mitu Chowdhury",
+    "education": "MBBS, FCPS (Psychiatry)",
+    "speciality": "Psychiatry",
+    "experience": "6 Years",
+    "registrationNumber": "BMDC-19293",
+    "hospital": "Mind Care Clinic",
+    "consultationFee": 750,
+    "available": true,
+    "schedule": {
+      "workingDays": ["Sunday", "Monday", "Thursday"],
+      "timeSlots": ["02:00 PM - 05:00 PM"]
+    }
+  },
+  {
+    "id": 11,
+    "image": "./img/doctor11.png",
+    "name": "Dr. Sajid Ahmed",
+    "education": "MBBS, MS (Urology)",
+    "speciality": "Urology",
+    "experience": "13 Years",
+    "registrationNumber": "BMDC-20294",
+    "hospital": "Urology Specialist Hospital",
+    "consultationFee": 1000,
+    "available": true,
+    "schedule": {
+      "workingDays": ["Sunday", "Wednesday", "Friday"],
+      "timeSlots": ["09:00 AM - 12:00 PM"]
+    }
+  },
+  {
+    "id": 12,
+    "image": "./img/doctor12.jpg",
+    "name": "Dr. Liza Sultana",
+    "education": "MBBS, MD (Endocrinology)",
+    "speciality": "Endocrinology",
+    "experience": "9 Years",
+    "registrationNumber": "BMDC-21295",
+    "hospital": "Hormone Care Clinic",
+    "consultationFee": 850,
+    "available": false,
+    "schedule": {
+      "workingDays": ["Monday", "Tuesday", "Thursday"],
+      "timeSlots": ["10:30 AM - 01:30 PM"]
+    }
+  }
+]

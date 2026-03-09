@@ -13,6 +13,4 @@ export function countUp(target, duration, callback) {
         callback(Math.floor(start));
     }, 10);
 }
-
-// Test
-countUp(100, 2000); // 100 পর্যন্ত যাবে 2 সেকেন্ডে
+ 

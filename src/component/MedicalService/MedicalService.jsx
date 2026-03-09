@@ -27,28 +27,28 @@ export default function MedicalService() {
                 </div>
             </div>
             <div className="flex justify-center gap-5 flex-wrap my-5">
-                <div className="shadow p-5 rounded w-[250px]">
+                <div className="shadow p-5 rounded w-[250px] bg-[#FFFFFF]">
                     <div className="">
                         <img src={doctor} alt="" />
                     </div>
                     <h1 className='text-5xl my-5'> {doctorCount} +</h1>
                     <p>Total Doctors</p>
                 </div>
-                <div className="shadow p-5 rounded w-[250px]">
+                <div className="shadow p-5 rounded w-[250px] bg-[#FFFFFF]">
                     <div className="">
                         <img src={patients} alt="" />
                     </div>
                     <h1 className='text-5xl my-5'> {patientsCount} +</h1>
                     <p>Total Patients</p>
                 </div>
-                <div className="shadow p-5 rounded w-[250px]">
+                <div className="shadow p-5 rounded w-[250px] bg-[#FFFFFF]">
                     <div className="">
                         <img src={review} alt="" />
                     </div>
                     <h1 className='text-5xl my-5'> {reviewCount} +</h1>
                     <p>Total Review</p>
                 </div>
-                <div className="shadow p-5 rounded w-[250px]">
+                <div className="shadow p-5 rounded w-[250px] bg-[#FFFFFF]">
                     <div className="">
                         <img src={staffs} alt="" />
                     </div>
