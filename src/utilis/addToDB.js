@@ -14,7 +14,7 @@ const getDoctorsStored = () => {
 const addToDoctorDB = (id) => {
     const storedDoctor = getDoctorsStored();
     if(storedDoctor.includes(id)) {
-        alert("doctor is alredy exist")
+        toast.error("doctor is alredy exist")
     }
     else{
         storedDoctor.push(id);
@@ -25,4 +25,4 @@ const addToDoctorDB = (id) => {
     }
 }
 
-export {addToDoctorDB}
+export {addToDoctorDB, getDoctorsStored}

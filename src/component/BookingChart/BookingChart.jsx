@@ -1,28 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLoaderData } from 'react-router'
 import { Bar, BarChart, Tooltip, XAxis, YAxis, ResponsiveContainer } from 'recharts'
+import { getDoctorsStored } from '../../utilis/addToDB';
 
 export default function BookingChart() {
+    const doctors = useLoaderData();
+    const [data, setData] = useState([])
     const [chartData, setChartData] = useState([])
     const [index, setIndex] = useState(0)
 
-    const doctors = useLoaderData();
+    useEffect(() => {
+        const storedChart = getDoctorsStored();
+        const storedChartInt = storedChart.map(id => parseInt(id));
+        const storedChartData = doctors.filter(chart => storedChartInt.includes(chart.id));
 
-    const data = doctors.map(doctor => {
+        setData(storedChartData)
+    }, [])
+
+    const newData = data.map(data => {
         return {
-            name: doctor.name,
-            consultationFee: doctor.consultationFee
+            name: data.name,
+            consultationFee: data.consultationFee
         };
     });
 
-    const handleAddData = () => {
-        if (index < data.length) {
-            setChartData([...chartData, data[index]]);
-            setIndex(index + 1);
-        }
+    if (index < newData.length) {
+        setChartData([...chartData, newData[index]]);
+        setIndex(index + 1);
     }
-
-    console.log('handle chart', handleAddData)
+    // console.log('handle chart', handleAddChartData())
 
     return (
         <div style={{ width: "80%", height: 400 }}>
@@ -37,3 +43,4 @@ export default function BookingChart() {
         </div>
     )
 }
+

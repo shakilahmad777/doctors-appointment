@@ -43,14 +43,14 @@ export default function DoctorsDetails() {
                     <span className='flex flex-wrap gap-3 items-center '>
                         <small>Availability</small>
                         {
-                            on ? (schedule.workingDays.map((day, index) => <button className='btn border border-green-200 bg-green-50 text-green-500 rounded-full' key={index}>{day}</button>)) : (<button className='btn border border-orange-200 bg-orange-50 text-orange-500 rounded-full'>Not Available | Please Come <ArrowRight></ArrowRight></button>)
+                            on ? (schedule.workingDays.map((day, index) => <button className='btn border border-green-200 bg-green-50 text-green-500 rounded-full' key={index}>{day}</button>)) : (<button className='btn border border-orange-200 bg-orange-50 text-orange-500 rounded-full'>Not Available | Please Come <ArrowRight className='animate-ping'></ArrowRight></button>)
                         }
                         {
-                            on ? '' : (schedule.workingDays.map((day, index) => <small className='  text-green-500 ' key={index}>{day}</small>))
+                            on ? '' : (schedule.workingDays.map((day, index) => <small className='  text-green-500' key={index}>{day}</small>))
                         }
                     </span>
                     <small>Consultation Fee: {consultationFee} Taka (include Vat) Per Consultation</small>
-                    <button className={`btn ${on ? 'bg-blue-600 text-white' : 'bg-red-400'}`} onClick={() => setOn(!on)}>
+                    <button className={`btn ${on ? 'bg-blue-600 text-white mt-3' : 'bg-red-400'}`} onClick={() => setOn(!on)}>
                         {
                             on ? 'ON' : 'OFF'
                         }
