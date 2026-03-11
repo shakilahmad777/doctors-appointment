@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Appointments({ appoints }) {
-    const { name, education, consultationFee } = appoints;
+export default function Appointments({ appoints, handleDeleteBooking }) {
+    const { id, name, education, consultationFee } = appoints;
     return (
         <div className="bg-[#FFFFFF] shadow-(--header-shadow) p-5 md:p-10  rounded">
             <div className='flex justify-between items-center'>
@@ -16,7 +16,7 @@ export default function Appointments({ appoints }) {
                 </small>
             </div>
             <div className="grid mt-5">
-                <button className='btn border-red-600 text-red-600 rounded-full'>Cancle Appointment</button>
+                <button onClick={() => handleDeleteBooking(id)} className='btn border-red-600 text-red-600 rounded-full'>Cancle Appointment</button>
             </div>
         </div>
     )

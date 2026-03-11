@@ -15,8 +15,12 @@ export default function Bookings() {
         
         setBooking(bookingDoctor)
         console.log('appointment',storedBookingDoctor)
-    }, [])
+    }, []);
 
+    const handleDeleteBooking = (id) => {
+        const remaining = booking.filter(appoints => appoints.id !== id);
+        setBooking(remaining);
+    }
     return (
         <div>
             <div className="flex justify-center">
@@ -30,7 +34,7 @@ export default function Bookings() {
             </div>
             <div className="flex gap-5 flex-col">
                 {
-                    booking.map(appoints => <Appointments key={appoints.id} appoints={appoints}></Appointments>)
+                    booking.map(appoints => <Appointments key={appoints.id} appoints={appoints} handleDeleteBooking={handleDeleteBooking}></Appointments>)
                 }
             </div>
         </div>
