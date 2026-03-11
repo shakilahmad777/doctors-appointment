@@ -12,7 +12,7 @@ export default function Appointments({ appoints }) {
                 <small>
                     ConsultationFee: {
                         consultationFee
-                    } Tk inc Vat
+                    } Tk includes Vat
                 </small>
             </div>
             <div className="grid mt-5">

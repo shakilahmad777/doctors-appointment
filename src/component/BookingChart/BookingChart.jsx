@@ -31,13 +31,13 @@ export default function BookingChart() {
     // console.log('handle chart', handleAddChartData())
 
     return (
-        <div style={{ width: "80%", height: 400 }}>
+        <div style={{ width: "90%", height: 400, marginTop: "3rem" }}>
             <ResponsiveContainer>
                 <BarChart data={data}>
                     <XAxis dataKey="name" />
                     <YAxis />
                     <Tooltip />
-                    <Bar dataKey="consultationFee" fill="#8884d8" activeBar={{ fill: 'pink', stroke: 'blue' }} radius={[30, 10, 0, 0]} />
+                    <Bar dataKey="consultationFee" fill="#8884d8" activeBar={{ fill: 'pink', stroke: 'blue' }} radius={[50, 20, 0, 0]} />
                 </BarChart>
             </ResponsiveContainer>
         </div>
