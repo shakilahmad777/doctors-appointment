@@ -24,7 +24,7 @@ export default function Bookings() {
     return (
         <div>
             <div className="flex justify-center">
-                <BookingChart></BookingChart>
+                <BookingChart booking={booking}></BookingChart>
             </div>
             <div className="flex justify-center my-5">
                 <div className="w-[80%]">
