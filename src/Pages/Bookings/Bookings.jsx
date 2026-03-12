@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BookingChart from '../../component/BookingChart/BookingChart';
-import { getDoctorsStored } from '../../utilis/addToDB';
+import { getDoctorsStored, removeDoctor } from '../../utilis/addToDB';
 import { useLoaderData } from 'react-router';
 import Appointments from '../../component/Appointments/Appointments';
 
@@ -18,6 +18,7 @@ export default function Bookings() {
     }, []);
 
     const handleDeleteBooking = (id) => {
+        removeDoctor(id)
         const remaining = booking.filter(appoints => appoints.id !== id);
         setBooking(remaining);
     }

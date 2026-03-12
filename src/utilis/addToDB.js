@@ -23,6 +23,12 @@ const addToDoctorDB = (id) => {
 
         toast.success('your appointment confirm')
     }
+};
+
+const removeDoctor = (id) => {
+    const stored = getDoctorsStored();
+    const remaining = stored.filter(storedId => parseInt(storedId) !== parseInt(id));
+    localStorage.setItem('doctor-list', JSON.stringify(remaining))
 }
 
-export {addToDoctorDB, getDoctorsStored}
+export {addToDoctorDB, getDoctorsStored, removeDoctor}
