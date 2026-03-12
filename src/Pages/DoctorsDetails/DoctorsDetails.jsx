@@ -1,20 +1,21 @@
 import { ArrowRight, BadgeAlert } from 'lucide-react';
 import React, { useState } from 'react'
-import { Link, useLoaderData, useParams } from 'react-router'
+import { Link, useLoaderData, useNavigate, useParams } from 'react-router'
 import { toast } from 'react-toastify';
 import { addToDoctorDB } from '../../utilis/addToDB';
 
 export default function DoctorsDetails() {
+    const [on, setOn] = useState(true);
+
     const { id } = useParams();
     const idParsInt = parseInt(id);
     const doctors = useLoaderData();
     const singleDoctors = doctors.find(doctor => doctor.id === idParsInt);
     const { name, image, experience, education, registrationNumber, speciality, available, consultationFee, hospital, schedule } = singleDoctors;
 
-    const [on, setOn] = useState(true);
+    const navigate = useNavigate();
 
     const handleDoctorList = (id) => {
-
         addToDoctorDB(id)
     }
 
@@ -74,7 +75,7 @@ export default function DoctorsDetails() {
                         <BadgeAlert></BadgeAlert> Due to high patient volume, we currently accepting appointments for doday only. We appreciate your understanding and cooperation.
                     </p>
                     {
-                        on ? (<button onClick={() => handleDoctorList(id)} className='btn bg-blue-500 rounded-full mx-10 text-white md:text-2xl py-5'><Link to="/bookings">Book Appointment Now</Link></button>) : (<button onClick={() => toast.error("Doctor Not Available")} className='btn bg-blue-500 rounded-full mx-10 text-white md:text-2xl py-5 opacity-50'>Book Appointment Now</button>)
+                        on ? (<button onClick={() => {handleDoctorList(id), navigate('/bookings')}} className='btn bg-blue-500 rounded-full mx-10 text-white md:text-2xl py-5'>Book Appointment Now</button>) : (<button onClick={() => toast.error("Doctor Not Available")} className='btn bg-blue-500 rounded-full mx-10 text-white md:text-2xl py-5 opacity-50'>Book Appointment Now</button>)
                     }
                 </div>
             </div>
