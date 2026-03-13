@@ -26,7 +26,7 @@ export default function Doctors() {
             <div className="flex justify-center my-5">
                 <div className="w-[80%]">
                     <h1 className='text-2xl md:text-5xl text-center md:leading-[3.5rem]'>Our Best Doctors</h1>
-                    <p className="md:text-[#818181] text-center my-5">Our platform connects you with verified. exprenced doctors across vairous specialties -- all your convenience. Whether it's a routine checkup or urgent consultation book appointment in minutes and receive quality care you can trust</p>
+                    <p className="!text-gary-700 text-center my-5">Our platform connects you with verified. exprenced doctors across vairous specialties -- all your convenience. Whether it's a routine checkup or urgent consultation book appointment in minutes and receive quality care you can trust</p>
                 </div>
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-5'>
@@ -37,7 +37,7 @@ export default function Doctors() {
             {
                 doctors.length > 6 && (
                     <div className="flex justify-center">
-                        <button className='btn shadow my-5 bg-blue-500 text-white' onClick={handleVigibleDoctors}>
+                        <button className='btn shadow my-5 !bg-blue-500 !text-white' onClick={handleVigibleDoctors}>
                             {vigibleDoctor === 6 ? 'View All Doctors' : 'Show Less'}
                         </button>
                     </div>
