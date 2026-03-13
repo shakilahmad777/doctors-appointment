@@ -15,13 +15,13 @@ export default function Doctor({ doctor }) {
                 />
             </div>
             <section className='flex gap-10 my-3'>
-                <button className='btn text-green-500 bg-gray-200 rounded-full'>Available</button>
-                <button className='btn text-blue-500 bg-gray-200 rounded-full'>{experience}</button>
+                <button className='btn !text-green-500 border-0 shadow-(--header-shadow) !bg-gray-200 rounded-full'>Available</button>
+                <button className='btn !text-green-500 border-0 shadow-(--header-shadow) !bg-gray-200 rounded-full'>{experience}</button>
             </section>
             <h2>{name}</h2>
             <p><small>{education}</small></p>
             <p><small>{registrationNumber}</small></p>
-            <Link className='btn rounded-full text-blue-500 border-1 border-blue-500' to={`/doctors/${id}`}><button>View Details</button></Link>
+            <Link className='btn rounded-full !text-blue-500 border-1 !border-blue-500' to={`/doctors/${id}`}><button>View Details</button></Link>
         </div>
     )
 }
