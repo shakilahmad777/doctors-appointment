@@ -22,10 +22,10 @@ export default function DoctorsDetails() {
     return (
         <div className=''>
             <div className="!bg-[#FFFFFF] rounded-[1rem] mb-5 py-15 text-center shadow-(--header-shadow)">
-                <h1 className='text-2xl md:text-5xl mb-5 shadow-(--header-shadow) p-3'>Doctors Profile Details</h1>
+                <h1 className='text-2xl md:text-5xl !text-black mb-5 shadow-(--header-shadow) p-3'>Doctors Profile Details</h1>
                 <div className="flex justify-center">
                     <div className="md:w-[70%] ">
-                        <p className='text-center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat iste, corporis qui accusantium sed velit architecto quisquam quis dignissimos rem, natus, voluptatem quam. Minima animi facere enim, ipsa quis illo.</p>
+                        <p className='text-center !text-gray-500'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat iste, corporis qui accusantium sed velit architecto quisquam quis dignissimos rem, natus, voluptatem quam. Minima animi facere enim, ipsa quis illo.</p>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@ export default function DoctorsDetails() {
                         }
                     </span>
                     <small>Consultation Fee: {consultationFee} Taka (include Vat) Per Consultation</small>
-                    <button className={`btn ${on ? '!bg-blue-600 text-white mt-3' : '!bg-red-400'}`} onClick={() => setOn(!on)}>
+                    <button className={`btn ${on ? '!bg-blue-600 !text-white mt-3' : '!bg-red-400'}`} onClick={() => setOn(!on)}>
                         {
                             on ? 'ON' : 'OFF'
                         }
